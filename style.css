@@ -15,7 +15,7 @@ body {
   padding: 12px 30px;
   cursor: pointer;
   display:block;
-  font-size: 50px;
+  font-size: 45px;
   height:100px;
   width :600px;
   margin:0 auto;
@@ -52,7 +52,7 @@ a{
 
 /*Dh write up style*/
 .about{
-    font-size :45px;
+    font-size :20px;
     color:white;
     text-transform: uppercase;
     font-family: times new roman;
