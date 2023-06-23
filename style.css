@@ -1,139 +1,52 @@
-/*style for html body*/
-body {
-         background-image: url("img/imm.jpg");
-         background-size :cover;
-         height :100%;
-         background-repeat:no-repeat;
-         background-attachment:fixed; 
-      }
-      
-/* Style buttons */
-.btn {
-  background-color: DodgerBlue;
-  border: none;
-  color: white;
-  padding: 12px 30px;
-  cursor: pointer;
-  display:block;
-  font-size: 45px;
-  height:100px;
-  width :600px;
-  margin:0 auto;
-  }
-  
-/* Darker background on mouse-over */
-.btn:hover {
-  background-color: RoyalBlue;
-}
-
-/*link decoration*/
-a{
-    text-decoration:none;
-    }
-    
-/*top icon */
-.topicon{
-    width:400px;
-    height:400px;
-    border:solid 6px #e8491d;
-    border-radius:95px;
-    display:block;
-    margin-left:auto;
-    margin-right:auto;
-    margin-top:90px;
+body{
+    margin:0;
     padding:0;
+    background-color: #ffffff;
+    font:32px Atrial, Helvetica,sans-serif;
+    color:black;
 }
 
-/* descriptive text */
-.dh{
-    color: orange ;
-    font-size:90px;
+/* Header **/
+header{
+  background:#ff6e40;
+  color:#ffffff;
+  padding-top:30px;
+  min-height:70px;
+  border-bottom:#ffc13b 9px solid;
 }
 
-/*Dh write up style*/
-.about{
-    font-size :20px;
+#branding{
+    color:navy;
+    padding-left:90px;
+    font-size:50px;
+}
+
+.box{
+    background-color:navy;
+    margin:8px;
+    padding-top:3px;
+    border-radius:5px;
+}
+
+.text1{
+   font-size:40px;
+   text-align:center;
+   padding:4;
+}
+
+.h2{
+    font-size:70px;
+    font-weight: bold;
+    color:navy;
+    text-align: center ;
+}
+
+.btn{
+    margin-left:400px;
     color:white;
-    text-transform: uppercase;
-    font-family: times new roman;
-    text-align: center;
-    }
-    
-/*preview text*/
-h2{
-    text-align:center;
-    color:white;
-    font-size:60px;
-    }
-    
-/*slider*/
-.preveiwbox{
-    width:100%;
-    height:100px;
-    border: ridged white 6px;
-    border-radius:17px;
+    font-weight:bold;
 }
 
-.lightbox {
-         visibility: hidden; /* hides the lightbox */
-         display: table; /* helps us center the lightbox-content */
-         
-         /* make the lightbox occupy the entire page */
-         position: fixed;
-         top: 0;
-         left: 0;
-         width: 100%;
-         height: 100%;
-         background: rgba(0, 0, 0, 0.7); /* black with 0.7 opacity */
-      }
-      .lightbox:target {
-         visibility: visible;
-      }
-      .lightbox-content {
-         display: table-cell;
-         vertical-align: middle; 
-        /* vertically center */
-         text-align: center; /* horizontally center */
-      }
-      .close {
-         /* position the CLOSE button to the top-right corner */
-         position: absolute;
-         top: 10px;
-         right: 10px;
-         font-size:60px;
-         
-         /* style the close button */
-         font-size: 20px;
-         font-weight: 300;
-         text-decoration: none;
-         color: white;
-      }
-      
-      /* make the image responsive */
-      img {
-         max-width: 100%;
-         height: auto;
-      }
-.bdown{
-    margin-top:40%;
-}
-
-.btn2{
-    background-color: DodgerBlue;
-  border: none;
-  color: white;
-  padding: 12px 30px;
-  cursor: pointer;
-  display:block;
-  font-size: 50px;
-  height:70px;
-  width :400px;
-  margin:0 auto;
-  }
-  
-/*footer*/
-h3{
-    text-align:center;
+.btn3{
     color:white;
-    font-size:30px;
 }
