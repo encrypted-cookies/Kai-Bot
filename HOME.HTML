@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>APP NAME</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/Home.css" />
+    
+    <link rel="stylesheet" href="css/Popup.css">
+
+    <!-- Boxicons CSS -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <i class="bx bx-menu menu-icon"></i>
+        <img src="img/contact_page/Instagram.svg" alt="" class="app_icon">
+        <span class="logo-name">DATA HUB</span>
+        <a href="#"><i class="bx bx-bell bell-icon"></i></a>
+        </div>
+        <!-- BOTTOM NAV -->
+        <div class="bottom-nav">
+            <div>
+           <button><a href="HOME.HTML"><i class="bx bx-home-alt bottom-icon"></i><br>Dashboard</a></button>
+           <button><a href="SERVICE.HTML"> <i class="bx bx-grid-alt bottom-icon"></i><br>Service</a></button>
+           <button onclick="fundPopup()"><i class="bx bx-plus bottom-plus bottom-icon"></i><br>Fund</button>
+           <button><a href="htmlcssjs-chatbox-ui/index.html"><i class="bx bx-chat bottom-icon"></i><br>Live Chat</a></button>
+           <button><a href="SETTINGS.HTML"><i class="bx bx-cog bottom-icon"></i><br>Settings</a></button>
+           </div>
+        </div>
+
+      <div class="sidebar">
+        <!--div class="logo">
+          <i class="bx bx-menu menu-icon"></i>
+          <span class="logo-name">MAX CORP</span>
+        </div-->
+
+        <div class="sidebar-content">
+            <img src="img/home_page/profile.png" alt="profile_picture" class="pfp">
+            <h3 class="usr">Max Ni9e [PREMIUM]</h3>
+            <p class="phn">2349031254430</p>
+            
+            
+          <ul class="lists">
+              <p>Menu</p>
+            <li class="list">
+              <a href="HOME.HTML" class="nav-link">
+                <i class="bx bx-home-alt icon"></i>
+                <span class="link">Dashboard</span>
+              </a>
+            </li>
+            <li class="list">
+              <a href="SERVICE.HTML" class="nav-link">
+                <i class="bx bx-grid-alt icon"></i>
+                <span class="link">Services</span>
+              </a>
+            </li>
+            <li class="list">
+              <a href="#" class="nav-link">
+                <i class="bx bx-user-plus icon"></i>
+                <span class="link">Become a Reseller</span>
+              </a>
+            </li>
+            <li class="list">
+              <a href="#" class="nav-link">
+                <i class="bx bx-history icon"></i>
+                <span class="link">Transaction History</span>
+              </a>
+            </li>
+            <li class="list">
+              <a href="#" class="nav-link" onclick="referPopup()">
+                <i class="bx bx-wallet icon"></i>
+                <span class="link">Refer and Earn</span>
+              </a>
+            </li>
+            <li class="list">
+              <a href="About.HTML" class="nav-link">
+                 <i class="bx bx-info-square icon"></i>
+                <span class="link">About</span>
+              </a>
+            </li>
+            <li class="list">
+              <a href="#" class="nav-link" onclick="showBalPopup()">
+                 <i class="bx bx-mobile-alt icon"></i>
+                <span class="link">Check Balance</span>
+              </a>
+            </li>
+            <li class="list">
+              <a href="#" class="nav-link" onclick="showPricingPopup()">
+                <i class="bx bx-purchase-tag icon"></i>
+                <span class="link">Pricing</span>
+              </a>
+            </li>
+            <li class="list">
+              <a href="FAQS.HTML" class="nav-link">
+                 <i class="bx bx-question-mark icon"></i>
+                <span class="link">FAQs</span>
+              </a>
+            </li>
+            <li class="list">
+              <a href="CONTACT.HTML" class="nav-link">
+                 <i class="bx bx-phone icon"></i>
+                <span class="link">Contact Us</span>
+              </a>
+            </li>
+          </ul>
+
+          <div class="bottom-cotent">
+              <p>Others</p>
+            <li class="list">
+              <a href="SETTINGS.HTML" class="nav-link">
+                <i class="bx bx-cog icon"></i>
+                <span class="link">Settings</span>
+              </a>
+            </li>
+            <li class="list">
+              <a href="#" class="nav-link">
+                <i class="bx bx-log-out icon"></i>
+                <span class="link">Logout</span>
+              </a>
+            </li>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section class="overlay"></section>
+    
+    <!-- DASHBOARD SECTION-->
+    <div class="dashboard">
+       <h6>[VIRTUAL ACCOUNT]<span class="bankname">(MAX BANK)</spam></h6>
+           <p class="rand">NGN WALLET</p>
+           <p>BALANCE:</p>
+           
+           <a onclick="changeIcon(this)" id="myBtn">
+  <p class="r">₦</p></i>
+  <span class="bal" data-text="0.00"></span>
+  <i id="faPlus" class="bx bx-show r"></i>  
+</a>
+         <!-- 3 BUTTONS SECTION-->
+         <div class="three_btn">
+             <a href="#" onclick="fundPopup()"><button class="bx bx-plus dashbtn" id="fund"></button><br>&nbsp;Fund Wallet</a>
+             <a href="#" onclick="TransferPopup()"><button class="bx bx-transfer dashbtn" id="transfer"></button><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Transfer</a>
+              <a href="#" onclick="WithdrawPopup()"><button class="bx bxs-bank dashbtn" id="withdraw"></button><br>&nbsp;&nbsp;&nbsp;Withdraw</a>
+         </div>
+         <!-- THREE BTN ENDING -->
+    </div>
+    <!-- DASHBOARD ENDING-->
+    
+    <div class="service_head">
+        <span>Services</span>
+    </div>
+    <!-- SERVICES -->
+    <div class="services">
+   <i class="bx bx-phone-call servicebox">
+            <br><p>airtime<br>topup</p><button onclick="showAirtimePopup()">Buy Now</button>
+            </i>
+<i class="bx bx-station servicebox">
+<br><p>mobile<br>data</p><button onclick="showModataPopup()">Buy Now
+</button></i>
+        <i class="bx bxs-tv servicebox"><br><p>cable<br>subscription</p><button onclick="showCablePopup()">Buy Now</button></i>
+        <i class="bx bxs-bolt servicebox"><br><p>electricity<br>bills</p><button onclick="showBillPopup()">Buy Now</button></i>
+        <i class="bx bxs-graduation servicebox"><br><p>edu<br>pins</p><button onclick="showEduPopup()">Buy Now</button></i>
+         <i class="bx bx-receipt servicebox"><br><p>print<br>e-pins</p><button onclick="showEpinPopup()">Buy Now</button></i>
+        <i class="bx bx-message-rounded-detail servicebox"><br><p>bulk<br>sms</p><button onclick="showCablePopup()">Buy Now</button></i>
+        </div>
+        <!-- END OF SERVICES -->
+        
+        <div class="transaction_head">
+        <span>Transactions</span>
+        <span class="veiw_all"><a href="#">Veiw All</a></span>
+    </div>
+    <div class="history">
+            <img src="img/home_page/successful.jpg" alt="">
+           <b> wallet credited</b><br>
+           <b>approved</b>
+        <p class="successful">9 MILLION</p><br>
+    </div>
+    
+    <div class="history">
+     <img src="img/home_page/failed.jpg" alt="">
+          <b>involked airtime purchase </b><br>
+           <b>purchase failed</b>
+           <p class="failed">1 MILLION</p><br>
+    </div>
+    
+    <div class="history">
+     <img src="img/home_page/successful.jpg" alt="">
+          <b>referral bonus earned</b><br>
+           <b>approved</b>
+           <p class="successful">10 MILLION</p><br>
+    </div>
+    
+    <div class="hidden">
+            
+        </div>
+        
+    <!-- FUND POP UP -->
+<div class="fundpop">
+  <div class="blocker" onclick="hideFundPopup()"></div>
+  <div class="fundcontents">
+      <p class="title">Fund Wallet</p>
+      <div class="pop_body">
+          <p>automatic funding</p>
+          <h5>[VIRTUAL ACCOUNT] (Max Bank), (Name)</h5>
+<span>✓ There is ₦20 charge from ₦1 - ₦999</span>
+<span>✓ ₦50 charge from ₦1,000 and above</span>
+      </div>
+      <!-- END OF POP_ACC-->
+      <!-- POP FORM -->
+     <div class="fund_form">
+         <label for="payment_method">payment method</label>
+         <select name="payment_method" id="payment_method" class="fundselect">
+             <option value=" " selected>Choose a preferred method</option>
+             <option value="automatic_funding">Automatic Funding</option>
+             <option value="manual_funding">Manual Funding </option>
+         </select>
+     </div>
+  </div>
+  <!--END OF POP FORM -->
+  
+</div>
+
+<!--///////////TRANSFER POP UP/////////////-->
+<div class="transferpop">
+  <div class="blocker" onclick="hideTransferPopup()"></div>
+  <div class="transferpopcontents">
+     a pop up
+  </div>
+</div>      
+
+
+
+<!--///////////WITHDRAW POP UP/////////////-->
+<div class="withdrawpop">
+  <div class="blocker" onclick="hideWithdrawPopup()"></div>
+  <div class="withdrawpopcontents">
+     a pop up
+  </div>
+</div>      
+
+    <!-- REFER POP UP -->
+<div class="referpop">
+  <div class="blocker" onclick="hideReferPopup()"></div>
+  <div class="refercontents">
+      <p class="title">Refer and Earn</p>
+      <div class="referpop_body">
+          <h4>invite friends and earn 2% of their first deposit</h4>
+          <div class="copy">
+        <!-- The text field -->
+<input class="copy_input"type="text" value="https://apexvtu.com/auth/username" id="refId">
+<!-- The button used to copy the text -->
+<button class="bx bx-copy"onclick="copyRef()"></button>
+          </div>            
+            <!-- COPY END-->
+            <div class="ref_form">
+                <input class="email_input" type="email" placeholder="Or enter Friend's email to invite">
+                <br>
+                <a href="HOME.HTML"><button class="submit_input">invite</button></a>
+            </div>
+            </div>
+  </div>            
+  <!--CONTENT END-->
+</div>
+<!-- POP END -->
+
+
+
+
+<!-- CHECK BALANCE POP UP-->
+<div class="balpop">
+    <div class="blocker" onclick="hideBalPopup()">
+    </div>
+     <div class="balpopcontents">
+         <p class="title">Check Balance</p>
+             <a href="tel:*461*4%23">
+                 <div class="balpop_list">
+                   <img src="img/pop_img/mtn.png" alt="mtnicon" class="spanlogo">
+                   <div>MTN</div>
+                   <div><i class="bx bx-link-external"></i></div> 
+                   </div>
+                   </a>
+                   <hr>
+     <!-- MTN BALPOP LIST END-->
+             
+<!--(⁠⁄⁠ ⁠⁄⁠•⁠⁄⁠-⁠⁄⁠•⁠⁄⁠ ⁠⁄⁠)GLO LIST STYLE(⁠⁄⁠ ⁠⁄⁠•⁠⁄⁠-⁠⁄⁠•⁠⁄⁠ ⁠⁄⁠)-->    
+             <a href="tel:*127*0%23">
+                 <div class="balpop_list">
+              <img src="img/pop_img/glo.jpeg" alt="glo_icon" class="spanlogo">
+                   <div>GLO</div>
+                   <div><i class="bx bx-link-external"></i></div> 
+                   </div>
+                   </a>
+                   <hr>
+     <!-- GLO BALPOP LIST END-->
+             
+<!--(⁠⁄⁠ ⁠⁄⁠•⁠⁄⁠-⁠⁄⁠•/)AIRTEL LIST STYLE(⁠⁄⁠ ⁠⁄⁠•⁠⁄⁠-⁠⁄⁠•⁄)-->    
+             <a href="tel:*140%23">
+                 <div class="balpop_list">
+             <img src="img/pop_img/airtel.png" alt="airtel_icon" class="spanlogo">
+                   <div>AIRTEL</div>
+                   <div><i class="bx bx-link-external"></i></div> 
+                   </div>
+                   </a>
+                   <hr>
+     <!-- AIRTEL BALPOP LIST END-->
+             
+<!--(⁠⁄⁠ ⁠⁄⁠•⁠⁄⁠-⁠⁄⁠•⁠⁄)9MOBILE LIST STYLE(⁠⁄⁠ ⁠⁄⁠•⁠⁄⁠-⁠⁄⁠•⁠⁄)-->    
+             <a href="tel:*228%23">
+                 <div class="balpop_list">
+                 <img src="img/pop_img/9mobile.jpeg" alt="9mobile_icon" class="spanlogo">
+                   <div>9MOBILE</div>
+                   <div><i class="bx bx-link-external"></i></div> 
+                   </div>
+                   </a>
+             <hr>
+     <!-- 9MOBILE BALPOP LIST END-->
+     </div>
+     <!-- BALCONTENT DIV END -->
+</div>
+<!-- BAL POP DIV END -->
+   <!-- (⁠⌐⁠■⁠-⁠■⁠)(⁠⌐⁠■⁠-⁠■⁠)(⁠⌐⁠■⁠-⁠■⁠)(⁠⌐⁠■⁠-⁠■⁠)(⁠⌐⁠■⁠-⁠■⁠) -->      
+    
+    
+    
+     
+<!--(■⁠-⁠■⁠)(⁠⌐⁠■⁠-⁠■⁠)PRICING POPUP(⁠⌐⁠■⁠-⁠■⁠)(⁠⌐⁠■⁠-⁠■⁠)-->      
+     <div class="pricingpop">
+ <div class="blocker" onclick="hidePricingPopup()"></div>     
+ <div class="pricingpopcontents">
+      <p class="title">PRICING</p>
+<h4>AVAILABLE PRODUCT PRICES</h4>
+             <div class="pricelistscroll">
+    <div class="price_table_body">
+<div>
+   <h5>PRODUCT</h5>
+   <h5>PRICES</h5>
+   <h5>AGENT PRICES</h5>
+</div>
+      <div>
+        <pre>500MB[SME]<br>30DAYS</pre>
+        <p>150</p>
+        <p>100</p>
+      </div>
+            <div>
+             <pre>1GB[SME]<br>30DAYS</pre>
+             <p>1500</p>
+             <p>1000</p>
+            </div>
+     </div>
+     <!-- PRICE LIST  END-->
+     </div>
+     <!-- PRICE LIST SCROLL END-->
+     </div>   
+ <!-- ⁄⁠(⁠⁄⁠ ⁠⁄⁠•⁠⁄⁠-⁠⁄⁠•⁠⁄⁠ ⁠⁄⁠)⁠⁄pricing pop content end-->    
+     </div>
+     <!-- PRICING POP END>
+  <!-- (⁠⌐⁠■⁠-⁠■⁠)(⁠⌐⁠■⁠-⁠■⁠)(⁠⌐⁠■⁠-⁠■⁠)(⁠⌐⁠■⁠-⁠■⁠)(⁠⌐⁠■⁠-⁠■⁠) -->
+    
+    <!-- ⁄⁠(⁠⁄⁠ ⁠⁄⁠•⁠⁄⁠-⁠⁄⁠•⁠⁄⁠ ⁠⁄⁠)⁠⁄⁄⁠(⁠⁄⁠ ⁠⁄⁠•⁠⁄⁠-⁠⁄⁠•⁠⁄⁠ ⁠⁄⁠)⁠⁄⁄⁠(⁠⁄⁠ ⁠⁄⁠•⁠⁄⁠-⁠⁄⁠•⁠⁄⁠ ⁠⁄⁠)⁠⁄⁄⁠(⁠⁄⁠ ⁠⁄⁠•⁠⁄⁠-⁠⁄⁠•⁠⁄⁠ ⁠⁄⁠)⁠⁄⁄⁠(⁠⁄⁠ ⁠⁄⁠•⁠⁄⁠-⁠⁄⁠•⁠⁄⁠ ⁠⁄⁠)⁠⁄⁄⁠(⁠⁄⁠ ⁠⁄⁠•⁠⁄⁠-⁠⁄) -->
+   <!-- AIRTIME POPUP-->
+  <div class="airtimepop">
+  <div class="blocker" onclick="hideAirtimePopup()"></div>
+  <div class="airtimepopcontents">
+      <p class="title">BUY AIRTIME</p>
+      <section class="buyAirtimeForm">
+         <select class="airNetworkSelect" id="airNetworkSelect">
+         <option value=" "> </option>
+         <option value="mtn">MTN</option>
+         <option value="glo">GLO</option>
+         <option value="airtel">AIRTEL</option>
+         <option value="9mobile">9MOBILE</option>
+         </select>
+         <label class="airNetworkLabel" id="airNetworkLabel" for="airNetworkSelect">Select Network</label>
+         <span id="airNetworkInvalid"><i class="bx bx-error-circle" ></i></span>
+  <span id="airNetworkInvalidText">PLEASE SELECT AN OPTION</span>
+         
+         <input type="tel" class="airPhoneSelect" id="airPhoneSelect">
+         <label class="airPhoneLabel" id="airPhoneLabel" for="airPhoneSelect">Phone Number</label>
+         <span id="airPhoneInvalid"><i class="bx bx-error-circle" ></i></span>
+  <span id="airPhoneInvalidText">INVALID PHONE NUMBER</span>
+  
+          <input type="tel" class="airAmountSelect" id="airAmountSelect">
+         <label class="airAmountLabel" id="airAmountLabel" for="airAmountSelect">Amount</label>
+         <span id="airAmountInvalid"><i class="bx bx-error-circle" ></i></span>
+  <span id="airAmountInvalidText">AMOUNT MUST BE AT LEAST ₦50</span>
+  
+           <input type="tel" class="airDiscountSelect" id="airDiscountSelect" disabled>
+         <label class="airDiscountLabel" id="airDiscountLabel" for="airDiscountSelect">Discount</label>
+         <input type="tel" class="airPinSelect" id="airPinSelect">
+         <label class="airPinLabel" id="airPinLabel" for="airPinSelect">Transaction Pin</label>
+         <span id="airPinInvalid"><i class="bx bx-error-circle" ></i></span>
+  <span id="airPinInvalidText">INVALID PIN</span>
+         <input type="submit" value="Purchase" class="airSubmit" id="airSubmit">
+      </section>
+   </div>
+ </div>
+<!--(⁠≧⁠(⁠ｴ⁠)⁠≦)(⁠≧⁠(⁠ｴ⁠)⁠≦)(⁠≧⁠(⁠ｴ⁠)⁠≦)(⁠≧⁠(⁠ｴ⁠)⁠≦)(⁠≧⁠(⁠ｴ⁠)⁠≦)(⁠≧⁠(⁠ｴ⁠)
+(⁠≧⁠(⁠ｴ⁠)⁠≦)(⁠≧⁠(⁠ｴ⁠)⁠≦)(⁠≧⁠(⁠ｴ⁠)⁠≦)(⁠≧⁠(⁠ｴ⁠)⁠≦)(⁠≧⁠(⁠ｴ⁠)⁠≦)(⁠≧⁠(⁠ｴ⁠)⁠≦)-->
+<!--///////////////DATA POP UP/////////////-->
+<div class="modatapop">
+  <div class="blocker" onclick="hideModataPopup()"></div>
+  <div class="modatapopcontents">
+     <p class="title">BUY MOBILE DATA</p>
+     <section class="buyDataForm">
+         <select class="dataNetworkSelect" id="dataNetworkSelect">
+      <option value=" "> </option>
+      <option value="mtn">MTN</option>
+      <option value="glo">GLO</option>
+      <option value="airtel">AIRTEL</option>
+      <option value="9mobile">9MOBILE</option>
+         </select>
+         <label class="dataNetworkLabel" id="dataNetworkLabel" for="dataNetworkSelect">Select Network</label>    <span id="dataNetworkInvalidText">PLEASE SELECT  A SERVICE PROVIDER FIRST</span>
+ 
+<!--(⁠≧⁠(⁠ｴ⁠)⁠≦)(⁠≧⁠(⁠ｴ⁠)⁠≦)(⁠≧⁠(⁠ｴ⁠)⁠≦)(⁠≧⁠(⁠ｴ⁠)⁠≦)(⁠≧⁠(⁠ｴ⁠)⁠≦)-->
+ <select class="planTypeSelect" id="planTypeSelect">   
+         </select>
+         <label class="planTypeLabel" id="planTypeLabel" for="planTypeSelect">Plan Type</label>
+         <span id="planTypeInvalidText">PLEASE SELECT A PLAN TYPE FIRST</span>
+<!--(⁠≧⁠(⁠ｴ⁠)⁠≦)(⁠≧⁠(⁠ｴ⁠)⁠≦)(⁠≧⁠(⁠ｴ⁠)⁠≦)(⁠≧⁠(⁠ｴ⁠)⁠≦)(⁠≧⁠(⁠ｴ⁠)⁠≦)-->
+
+         <select class="dataPlanSelect" id="dataPlanSelect">
+             
+         </select>
+         <label class="dataPlanLabel" id="dataPlanLabel" for="dataPlanSelect">Data Plan</label>
+            <input type="tel" class="dataPriceSelect" id="dataPriceSelect" disabled>
+         <label class="dataPriceLabel" id="dataPriceLabel" for="dataPriceLabel">Cost Price</label>
+         <input type="tel" class="dataPhoneSelect" id="dataPhoneSelect">
+         <label class="dataPhoneLabel" id="dataPhoneLabel" for="dataPhoneSelect">Phone Number</label>
+         <span id="dataPhoneInvalid"><i class="bx bx-error-circle" ></i></span>
+  <span id="dataPhoneInvalidText">INVALID PHONE NUMBER</span>
+  
+         <input type="tel" class="dataPinSelect" id="dataPinSelect">
+         <label class="dataPinLabel" id="dataPinLabel" for="dataPinSelect">Transaction Pin</label>
+         <span id="dataPinInvalid"><i class="bx bx-error-circle" ></i></span>
+  <span id="dataPinInvalidText">INVALID PIN</span>
+         <input type="submit" value="Purchase" class="dataSubmit" id="dataSubmit">         
+     </section>
+     </div>
+     </div>
+     
+     
+<!--///////////////CABLE POP UP/////////////-->
+<div class="cablepop">
+  <div class="blocker" onclick="hideCablePopup()"></div>
+  <div class="cablepopcontents">
+   <p class="title">BUY CABLE SUBSCRIPTION</p>
+        <section class="buyCableForm">
+         <select class="cableNameSelect" id="cableNameSelect">
+   <option value=" "> </option>
+   <option value="dstv">DSTV</option>
+   <option value="gotv">GOTV</option>
+   <option value="startimes">STARTIMES</option>
+         </select>
+         <label class="cableNameLabel" id="cableNameLabel" for="cableNameSelect">Cable Name</label>
+         <span id="cableNameInvalidText">PLEASE SELECT A SERVICE PROVIDER FIRST</span>
+         
+           <select class="cablePlanSelect" id="cablePlanSelect">
+
+         </select>
+         <label class="cablePlanLabel" id="cablePlanLabel" for="cablePlanSelect">Cable Plan</label>     
+          <input type="tel" class="cablePriceSelect" id="cablePriceSelect" disabled>
+         <label class="cablePriceLabel" id="cablePriceLabel" for="cablePriceSelect">Cost Price</label>
+ <input type="tel" class="IucSelect" id="IucSelect">
+         <label class="IucLabel" id="IucLabel" for="IucSelect">IUC Number</label>
+         <span id="IucInvalid"><i class="bx bx-error-circle" ></i></span>
+  <span id="IucInvalidText">INVALID IUC NUMBER LENGTH</span>        
+         
+<input type="tel" class="cablePinSelect" id="cablePinSelect">
+         <label class="cablePinLabel" id="cablePinLabel" for="cablePinSelect">Transaction Pin</label>
+         <span id="cablePinInvalid"><i class="bx bx-error-circle" ></i></span>
+  <span id="cablePinInvalidText">INVALID PIN</span>         
+    <input type="submit" value="Verify IUC" class="cableSubmit" id="cableSubmit">  
+     </section>
+  </div>
+</div>
+
+<!--///////////ELECTRICITY POP UP//////////-->
+<div class="billpop">
+  <div class="blocker" onclick="hideBillPopup()"></div>
+  <div class="billpopcontents">
+  <p class="title">PAY BILLS</p>
+  <section class="payBillForm">
+         <select class="billNameSelect" id="billNameSelect">
+   <option value=" "> </option>
+   <option value="dstv">DSTV</option>
+   <option value="gotv">GOTV</option>
+   <option value="startimes">STARTIMES</option>
+         </select>
+         <label class="billNameLabel" id="billNameLabel" for="billNameSelect">Disco Name</label>
+         <span id="billNameInvalidText">PLEASE SELECT A SERVICE PROVIDER</span>
+         
+           <select class="meterTypeSelect" id="meterTypeSelect">
+
+         </select>
+         <label class="meterTypeLabel" id="meterTypeLabel" for="meterTypeSelect">Meter Type</label>     
+         
+ <input type="tel" class="meterNumberSelect" id="meterNumberSelect">
+         <label class="meterNumberLabel" id="meterNumberLabel" for="meterNumberSelect">Meter Number</label>
+         <span id="meterInvalid"><i class="bx bx-error-circle" ></i></span>
+  <span id="meterInvalidText">INVALID METER NUMBER LENGTH</span>        
+  
+  <input type="tel" class="meterPriceSelect" id="meterPriceSelect">
+         <label class="meterPriceLabel" id="meterPriceLabel" for="meterPriceSelect">Cost Price</label>
+         
+<input type="tel" class="meterPinSelect" id="meterPinSelect">
+         <label class="meterPinLabel" id="meterPinLabel" for="meterPinSelect">Transaction Pin</label>
+         <span id="meterPinInvalid"><i class="bx bx-error-circle" ></i></span>
+  <span id="meterPinInvalidText">INVALID PIN</span>         
+    <input type="submit" value="Verify Meter Number" class="meterSubmit" id="meterSubmit"> 
+  </section>
+  </div>
+</div>
+
+
+<!--///////////////EDU POP UP/////////////-->
+<div class="edupop">
+  <div class="blocker" onclick="hideEduPopup()"></div>
+  <div class="edupopcontents">
+     <p class="title">BUY E-PINS</p>
+     <section class="buyEpinForm">
+            <select class="examNameSelect" id="examNameSelect" required>
+         <option value=" "> </option>
+         <option value="waec">WAEC</option>
+         <option value="neco">NECO</option>
+         <option value="jamb">JAMB</option>
+         </select>
+         <label class="examNameLabel" id="examNameLabel" for="examNameSelect">Exam Name</label>
+         <span id="examNameInvalidText">PLEASE SELECT EXAM TYPE FIRST</span>     
+         
+         <input type="tel" class="examQuantitySelect" id="examQuantitySelect">
+         <label class="examQuantityLabel" id="examQuantityLabel" for="examQuantitySelect">Quantity</label>
+         <span id="examQuantityInvalid"><i class="bx bx-error-circle" ></i></span>
+  <span id="examQuantityInvalidText">THIS FIELD IS REQUIRED</span>
+  
+  <input type="tel" class="examPriceSelect" id="examPriceSelect" disabled>
+         <label class="examPriceLabel" id="examPriceLabel" for="examPriceSelect">Cost Price</label>
+         
+          <input type="email" class="examEmailSelect" id="examEmailSelect">
+         <label class="examEmailLabel" id="examEmailLabel" for="examEmailSelect">Receiver's Email</label>
+         <span id="examEmailInvalid"><i class="bx bx-error-circle" ></i></span>
+  <span id="examEmailInvalidText">PLEASE USE A VALID EMAIL ADDRESS</span>
+  
+         <input type="tel" class="examPinSelect" id="examPinSelect">
+         <label class="examPinLabel" id="examPinLabel" for="examPinSelect">Transaction Pin</label>
+         <span id="examPinInvalid"><i class="bx bx-error-circle" ></i></span>
+  <span id="examPinInvalidText">INVALID PIN</span>
+         <input type="submit" value="Purchase" class="airSubmit" id="examSubmit">
+         
+         
+       
+     </section>
+  </div>
+</div>      
+      
+<!--//////////////E-PINS POP UP/////////////-->
+<div class="epinpop">
+  <div class="blocker" onclick="hideEpinPopup()"></div>
+  <div class="epinpopcontents">
+     a pop up
+  </div>
+</div>      
+    <script src="JS/homescript_.js"></script>
+      <script src="JS/sidenav.js"></script>
+  </body>
+</html>
