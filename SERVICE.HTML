@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page title</title>
+    <link rel="stylesheet" href="CSS/Service.css">
+    <link rel="stylesheet" href="CSS/Popup.css">
+    <!-- BOX ICONS -->
+    <link
+     href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+</head>
+<body>
+            <!-- NAV SECTION -->
+     <nav>
+        <a href="HOME.HTML"><i class="bx bx-chevron-left chevron"></i></a>
+        <div id="heading">SERVICES</div>
+        <div></div>
+        </nav>
+        
+     <!-- AIRTIME BUBBLE-->
+     <div class="container">
+  <i class="bx bx-phone-call icon"></i>
+  <br /><br />
+        AIRTIME<br>
+         <button onclick="showAirtimePopup()">BUY</button>
+     </div>  
+      <!-- AIRTIME POPUP-->
+  <div class="airtimepop">
+  <div class="blocker" onclick="hideAirtimePopup()"></div>
+  <div class="airtimepopcontents">
+      <p class="title">BUY AIRTIME</p>
+      <section class="buyAirtimeForm">
+         <select class="airNetworkSelect" id="airNetworkSelect">
+         <option value=" "> </option>
+         <option value="mtn">MTN</option>
+         <option value="glo">GLO</option>
+         <option value="airtel">AIRTEL</option>
+         <option value="9mobile">9MOBILE</option>
+         </select>
+         <label class="airNetworkLabel" id="airNetworkLabel" for="airNetworkSelect">Select Network</label>
+         <span id="airNetworkInvalid"><i class="bx bx-error-circle" ></i></span>
+  <span id="airNetworkInvalidText">PLEASE SELECT AN OPTION</span>
+         
+         <input type="tel" class="airPhoneSelect" id="airPhoneSelect">
+         <label class="airPhoneLabel" id="airPhoneLabel" for="airPhoneSelect">Phone Number</label>
+         <span id="airPhoneInvalid"><i class="bx bx-error-circle" ></i></span>
+  <span id="airPhoneInvalidText">INVALID PHONE NUMBER</span>
+  
+          <input type="tel" class="airAmountSelect" id="airAmountSelect">
+         <label class="airAmountLabel" id="airAmountLabel" for="airAmountSelect">Amount</label>
+         <span id="airAmountInvalid"><i class="bx bx-error-circle" ></i></span>
+  <span id="airAmountInvalidText">AMOUNT MUST BE AT LEAST ₦50</span>
+  
+           <input type="tel" class="airDiscountSelect" id="airDiscountSelect" disabled>
+         <label class="airDiscountLabel" id="airDiscountLabel" for="airDiscountSelect">Discount</label>
+         <input type="tel" class="airPinSelect" id="airPinSelect">
+         <label class="airPinLabel" id="airPinLabel" for="airPinSelect">Transaction Pin</label>
+         <span id="airPinInvalid"><i class="bx bx-error-circle" ></i></span>
+  <span id="airPinInvalidText">INVALID PIN</span>
+         <input type="submit" value="Purchase" class="airSubmit" id="airSubmit">
+      </section>
+   </div>
+ </div>
+     
+     
+     
+     
+     
+     
+     
+     
+      <!-- DATA BUBBLE-->
+     <div class="container">
+        <i class="bx bx-station icon"></i>
+  <br /><br />
+        DATA PLANS<br>
+         <button>BUY</button>
+     </div>  
+     
+      <!-- CABLE BUBBLE-->
+     <div class="container">
+        <i class="bx bxs-tv icon"></i>
+  <br /><br />
+        TV SUBSCRIPTION<br>
+         <button>BUY</button>
+     </div>  
+     
+      <!--BILLS  BUBBLE-->
+     <div class="container">
+        <i class="bx bxs-bolt icon"></i>
+  <br /><br />
+        ELECTRICITY BILLS<br>
+         <button>BUY</button>
+     </div>  
+     
+      <!--E-PINS BUBBLE-->
+     <div class="container">
+        <i class="bx bxs-graduation icon"></i>
+  <br /><br />
+        E-PINS<br>
+         <button>BUY</button>
+     </div>  
+      
+     <!-- HIDDEN PART -->
+     <div class="hidden"></div>
+     
+     <script src="JS/services.js"></script>
+</body>
+</html>

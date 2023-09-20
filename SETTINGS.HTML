@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page title</title>
+    <link rel="stylesheet" href="CSS/Settings.css">
+    <link rel="stylesheet" href="CSS/darkmode.css">
+    <!-- BOX ICONS -->
+    <link
+     href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+</head>
+<body>
+            <!-- NAV SECTION -->
+    <nav>
+        <a href="HOME.HTML"><i class="bx bx-chevron-left chevron"></i></a>
+        <div id="heading">SETTINGS</div>
+        <a href="transaction.HTML"><i class="bx bx-bell chevron"></i></a><sup class="count">9+</sup>
+        </nav>
+    <!-- PROFILE PHOTO SECTION-->
+    <div class="profileimg">
+    <img src="img/profile_page/profile.png" class="pfp" alt="">
+    </div>
+    <p class="wallet-id">WALLET ID: 0000000000</p>
+    <div>
+        <p class="theme">THEME</p>
+        <div class="modeswitch">
+            <button id="btn" onclick="change()">Normal Mode</button>
+        </div>
+        <p class="theme">MY SETTINGS</p>
+        <div class="profile-settings">
+        <a href="#"><span>Change Name</span></a>
+        <a href="#"><span>Update Mobile Number</span></a>
+        <a href="#"><span>Update Email</span></a>
+        <a href="#"><span>Edit My About</span></a>
+        </div>
+        
+        <p class="theme">SECURITY</p>
+        <div class="profile-settings">
+        <a href="#"><span>Change Password</span></a>
+        <a href="#"><span>Change Pin</span></a>
+        <a href="#"><span>Enable 2FA Verification</span></a>
+        <a href="#"><span>Log Out</span></a>
+        </div>
+    </div>
+    
+       <!-- HIDDEN PART -->
+     <div class="hidden"></div>
+     <script src="JS/darkMode.js"></script>
+</body>
+</html>
