@@ -1,0 +1,182 @@
+/*GLOBAL DECLARATION*/
+*{
+    box-sizing: border-box;
+}
+
+/*REMOVE ALL EXTRA SPACE FROM HTML&BODY*/
+body, html{
+    margin:0;
+    padding:0;
+    background-color: #e3f2fd;
+    font-size:17px;
+}
+
+/*SET '::SELECTION PROPERTY'*/
+::selection{
+    background:#0076ff;
+    color:white;
+}
+/*SET BODY TO BEGIN 10VH BELOW HEADER*/
+body{
+    margin:12vh auto 0;
+}
+
+html{
+    position :relative;
+    height:100%;
+}
+
+/*NAV BAR STYLE*/
+nav{
+    display:flex;
+    width:100%;
+    justify-content: Space-between;
+    height:10vh;
+    font-size:3vh;
+    background-color: white ;
+    align-items:center;
+    color:#0076ff;
+    position :fixed;
+    font-weight:bold;
+    box-shadow:0 0 10px grey;
+    top:0;
+    left:0;
+    text-align:center;
+}
+
+/*SET NAV BAR HEIGHT & FONT FOR LARGER SCREEN*/
+@media screen and (max-width:450px){
+        nav{
+            height:10vh;
+            font-size:3vh;
+        }
+    }
+    
+/*SET EXIT KEY AND HIDDEN KEY TO THE EDGE*/
+#hehading{
+    padding:0 25%; 0 25%;
+}
+
+/*SET RIGHT ICON TO HIDDEN*/
+
+
+/*STYLE ICON LINKS*/
+nav >a, nav >a:hover, nav >a:link, nav >a:visited{
+  text-decoration:none;
+  color: #0076ff;
+  font-size:5vh;
+}
+
+.chevron{
+    font-size:80px;
+}
+
+
+/*GLOBAL MAKE PAGE IMAGES RESPONSIVE*/
+img{
+    max-width: 100%;
+    height:auto;
+}
+
+/*STYLE IMAGE BUBBLE*/
+.container{
+    background-color:white;
+    width: 90%;
+    display :flex;
+    justify-content:center;
+    margin:0 auto;
+    border-radius:30px;
+}
+
+/* ACCORDION STYLE*/
+.box{
+    margin:20px auto;
+    border:1px solid white;
+    width:90%;
+    border-radius:30px;
+}
+input[type="radio"]{
+    display:none;
+}
+label{
+    display :flex;
+    Padding:30px;
+    background-color:white;
+    color:#0076ff;
+    justify-content:space-between;
+    font-size:30px;
+    transition:1s;
+}
+label::before{
+    content:"Q. "
+}
+label::after{
+    content:"√"
+}
+.labelcurve{
+    border-radius:30px 30px 0 0;
+}
+.labellast{
+    border-radius:0 0 30px 30px;
+}
+input:checked ~ .labellast{
+    border-radius:0;
+}
+label:hover{
+    background-color:#0076ff;
+    color:white;
+}
+.answer{
+    padding:10px;
+    font-size:25px;
+    color: black;
+    background-color: white;
+    display:none;
+    text-align:justify;
+}
+.answer::before{
+    content:"ANSWER - ";
+    color:#0076ff;
+}
+input:checked ~ .answer{
+    display:block;
+}
+
+/*CONTACT BUBBLE SECTION*/
+.contact_bubble{
+    background-color: #0076ff;
+    color:white;
+    width:90%;
+    margin:0 auto;
+    margin-bottom:30px;
+    display:block;
+    text-align:center;
+    border-radius:30px;
+    padding :20px;
+}
+.contact_bubble >h3{
+    padding-top:40px;
+    font-size:35px;
+}
+.grey{
+    color:#ffffffcb;
+    font-size:25px;
+}
+button{
+    margin-bottom:20px;
+    width: 200px;
+    height: 50px;
+    font-size:22px;
+    border-radius:15px;
+    border:0;
+    color:white;
+    background-color:#242424;
+    padding :5px;
+}
+button:hover{
+    width: 180px;
+    height: 50px;
+}
+.hidden{
+    padding:1px;
+}
